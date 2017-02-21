@@ -142,6 +142,22 @@ namespace UsefulStuffPortable.Extensions
         }
 
         /// <summary>
+        /// Changes the first letter of a string to uppercase
+        /// </summary>
+        /// <param name="value">A valid string to modify</param>
+        /// <returns>New string with uppercase letter</returns>
+        public static string UpperFirstLetter(this string value)
+        {
+            if(value.Length > 0)
+            {
+                char[] array = value.ToCharArray();
+                array[0] = char.ToUpper(array[0]);
+                return new string(array);
+            }
+            return value;
+        }
+
+        /// <summary>
         /// Checks if a date is between two dates
         /// </summary>
         /// <param name="dt">Date to check</param>
