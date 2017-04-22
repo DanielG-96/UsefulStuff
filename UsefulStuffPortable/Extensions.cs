@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security;
 
 namespace UsefulStuffPortable.Extensions
 {
@@ -189,6 +190,7 @@ namespace UsefulStuffPortable.Extensions
         /// </summary>
         /// <param name="date">Date to check</param>
         /// <returns>Readable date</returns>
+        [SecurityCritical]
         public static string ToPrettyDate(this DateTime date)
         {
             TimeSpan ts = DateTime.Now.Subtract(date);
