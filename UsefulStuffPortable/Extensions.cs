@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Security;
 
 namespace UsefulStuffPortable.Extensions
@@ -190,7 +191,6 @@ namespace UsefulStuffPortable.Extensions
         /// </summary>
         /// <param name="date">Date to check</param>
         /// <returns>Readable date</returns>
-        [SecurityCritical]
         public static string ToPrettyDate(this DateTime date)
         {
             TimeSpan ts = DateTime.Now.Subtract(date);
@@ -289,6 +289,19 @@ namespace UsefulStuffPortable.Extensions
             }
             DateTime result = current.AddDays(offsetDays);
             return result;
+        }
+
+        /// <summary>
+        /// Replaces an object in a list at a specified index
+        /// </summary>
+        /// <param name="list">List to modify</param>
+        /// <param name="oldValue">Old item</param>
+        /// <param name="newValue">New item</param>
+        public static void ReplaceAt<T>(this List<T> list, T oldValue, T newValue)
+        {
+            int index = list.IndexOf(oldValue);
+            list.RemoveAt(index);
+            list.Insert(index, newValue);
         }
     }
 }
