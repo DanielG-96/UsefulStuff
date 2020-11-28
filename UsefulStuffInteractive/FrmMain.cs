@@ -1,16 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using UsefulStuffPortable.Utilities;
 using UsefulStuffPortable.Extensions;
 
-namespace USPTests
+namespace UsefulStuffInteractive
 {
-    class Program
+    public partial class FrmMain : Form
     {
-        static void Main(string[] args)
+        public FrmMain()
+        {
+            InitializeComponent();
+        }
+
+        private void BtnReplaceAtTest_Click(object sender, EventArgs e)
+        {
+            ReplaceString();
+        }
+
+        private void ReplaceString()
         {
             List<string> list = new List<string>
             {
