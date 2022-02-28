@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace UsefulStuffPortable.Extensions
+﻿namespace UsefulStuffPortable.Extensions
 {
     public static class Extensions
     {

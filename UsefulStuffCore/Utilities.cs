@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace UsefulStuffPortable.Utilities
+﻿namespace UsefulStuffPortable.Utilities
 {
     public static class Utilities
     {
